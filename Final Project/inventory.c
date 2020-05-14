@@ -62,16 +62,6 @@ void executeDrop(const char *noun)
    moveObject(noun, player, player->location);
 }
 
-void executeGive(const char *noun)
-{
-   moveObject(noun, player, personHere());
-}
-
-void executeAsk(const char *noun)
-{
-   moveObject(noun, personHere(), player);
-}
-
 void executeInventory(void)
 {
    if (listObjectsAtLocation(player) == 0)

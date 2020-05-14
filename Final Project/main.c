@@ -37,22 +37,14 @@ static int parseAndExecute()
       {
          executeDrop(noun);
       }
-      else if (strcmp(verb, "give") == 0)
-      {
-         executeGive(noun);
-      }
-      else if ((strcmp(verb, "ask") == 0) || (strcmp(verb, "a") == 0))
-      {
-         executeAsk(noun);
-      }
       else if ((strcmp(verb, "inventory") == 0) || (strcmp(verb, "i") == 0))
       {
          executeInventory();
       }
        else if ((strcmp(verb, "help") == 0) || (strcmp(verb, "h") == 0))
       {
-         printf("Help Command Actions: 'q'uit, 'l'ook, go, 'a'sk, 'i'nventory, 'd'rop, give, get\n");
-         printf("Help Command: look around, go north\n");
+         printf("Help Command Actions: 'q'uit, 'l'ook, go, 'i'nventory, 'd'rop, get\n");
+         printf("Help Command: look around, go north, get gun, inventory\n");
       }
       else
       {
@@ -65,7 +57,9 @@ static int parseAndExecute()
 int main()
 {
    printf("Welcome to the CMPSC 473 Text Adventure.\n");
-   printf("You are going on a quest and along the way you will be challenged.\n");
+   printf("You are a special forces soldier on a mission to save the world from evil\n");
+   printf("Along the way you will be challenged & you will need to bring your OS knowledge.\n");
+   printf("If you fail to stop the evil, the world will fall into chaos\n");
    printf("For help during your quest type in help.\n\n");
    executeLook("around");
    while (getInput() && parseAndExecute());
